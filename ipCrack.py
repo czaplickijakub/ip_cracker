@@ -19,4 +19,7 @@ else:
 end_time = datetime.datetime.now()
 
 total_time = end_time - start_time
-print(total_time)
+hours, remainder = divmod(total_time.seconds, 3600)
+minutes, seconds = divmod(remainder, 60)
+
+print(f"Total time: {hours} hours, {minutes} minutes, {seconds} seconds")
