@@ -14,7 +14,7 @@ for ip_tuple in itertools.product(range(256), repeat=4):
         print("Hashed IP address cracked successfully! The original IP address is:", ip_address)
         break
 else:
-    print("Unable to crack the hashed IP address using every possible IP address combination.")
+    print("Unable to crack the hashed IP address: hash input error.")
 
 end_time = datetime.datetime.now()
 
