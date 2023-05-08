@@ -1,7 +1,8 @@
 # ip_cracker
 A python tool to brute force a hashed IP address
 
-## To run this code, place the code into an IDE such as VS code and press the play button.
-## If using terminal or command line, use the command *python ipCrack.py*
+## The source code is in ipCrack.py
 
-### *Note:* code run time may range from a few minutes to a few hours. This depends on the ip address. 
+## To run this program, download ipCrack.exe and double click. Follow on screen instructions
+
+## Windows defender may flag the code. Make it a trusted file: Virus and Threat Protection > Manage Settings > Add or Remove Exclusions > Find ipCrack.exe

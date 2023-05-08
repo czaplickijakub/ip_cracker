@@ -6,7 +6,6 @@
 import hashlib
 import itertools
 import datetime
-import re
 
 while True:
 
@@ -14,7 +13,7 @@ while True:
     hashed_ip = input("Enter the hashed IP address and press enter: ")
 
     # Check if the input is a valid MD5 hash
-    if not re.match(r'^[a-fA-F0-9]{32}$', hashed_ip):
+    if len(hashed_ip) != 32 or any(c not in '0123456789abcdefABCDEF' for c in hashed_ip):
         print("Invalid input: not an MD5 hash.")
         continue
 
@@ -26,7 +25,7 @@ while True:
         ip_address = ".".join(str(i) for i in ip_tuple)
 
         hashed = hashlib.md5(ip_address.encode('utf-8')).hexdigest()
-        
+
         print(f"Trying {ip_address}")
         if hashed == hashed_ip:
             print("Hashed IP address cracked successfully! The original IP address is:", ip_address)
